@@ -1,13 +1,15 @@
 <script>
   let name = "dancheg";
   let antoherVar = "another variable";
+  function handleClick() {
+    antoherVar = "reactivity shit";
+  }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>
-    {antoherVar}
-  </p>
+  <p>{antoherVar}</p>
+  <button on:click={handleClick}>update some stuff</button>
 </main>
 
 <style>
