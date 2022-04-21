@@ -1,14 +1,14 @@
 <script>
   let name = "dancheg";
-  let antoherVar = "another variable";
+  let counter = 1;
   function handleClick() {
-    antoherVar = "reactivity shit";
+    counter += 1;
   }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
-  <p>{antoherVar}</p>
+  <p>{counter}</p>
   <button on:click={handleClick}>update some stuff</button>
 </main>
 
