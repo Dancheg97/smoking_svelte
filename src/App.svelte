@@ -4,16 +4,13 @@
   function increment() {
     counter += 1;
   }
-  function type(text) {
-    name = text.target.value;
-  }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
   <p>{counter}</p>
   <button on:click={increment}>update some stuff</button>
-  <input type="text" on:input={type} />
+  <input type="text" bind:value={name} />
 </main>
 
 <style>
