@@ -1,15 +1,19 @@
 <script>
   let name = "dancheg";
   let counter = 1;
-  function handleClick() {
+  function increment() {
     counter += 1;
+  }
+  function type(text) {
+    name = text.target.value;
   }
 </script>
 
 <main>
   <h1>Hello {name}!</h1>
   <p>{counter}</p>
-  <button on:click={handleClick}>update some stuff</button>
+  <button on:click={increment}>update some stuff</button>
+  <input type="text" on:input={type} />
 </main>
 
 <style>
