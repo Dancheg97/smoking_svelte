@@ -4,13 +4,14 @@
   function increment() {
     counter += 1;
   }
+  let color = "black";
 </script>
 
 <main>
-  <h1>Hello {name}!</h1>
+  <h1 style="color: {color}">Hello {name}!</h1>
   <p>{counter}</p>
-  <button on:click={increment}>update some stuff</button>
-  <input type="text" bind:value={name} />
+  <button on:click={increment}>Increment counter</button>
+  <input type="text" bind:value={color} />
 </main>
 
 <style>
