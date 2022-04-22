@@ -4,6 +4,7 @@
   let ncolor = "gray";
 
   $: fullName = `${fname} ${sname}`;
+  $: console.log(fullName);
 </script>
 
 <main>
