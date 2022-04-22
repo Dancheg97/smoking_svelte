@@ -1,17 +1,12 @@
 <script>
-  let name = "dancheg";
-  let counter = 1;
-  function increment() {
-    counter += 1;
-  }
-  let color = "black";
+  let fname = "jimmy";
+  let sname = "hendrix";
+  let ncolor = "gray";
 </script>
 
 <main>
-  <h1 style="color: {color}">Hello {name}!</h1>
-  <p>{counter}</p>
-  <button on:click={increment}>Increment counter</button>
-  <input type="text" bind:value={color} />
+  <h1 style="color:{ncolor}">FName: {fname}, SName {sname}</h1>
+  <input type="text" bind:value={ncolor} />
 </main>
 
 <style>
