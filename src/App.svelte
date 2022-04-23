@@ -13,7 +13,8 @@
       Hello {person.sname}! He's {person.age}
     </h1>
     <button
-      on:click={() => {
+      on:click={(event) => {
+        console.log(event);
         people = people.filter((pers) => pers.id != person.id);
       }}
     >
