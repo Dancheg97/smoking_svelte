@@ -1,17 +1,18 @@
 <script>
-  let fname = "jimmy";
-  let sname = "hendrix";
-  let ncolor = "gray";
-
-  $: fullName = `${fname} ${sname}`;
-  $: console.log(fullName);
+  let people = [
+    { fname: "tasty", sname: "sweety", age: 21, iq: 128 },
+    { fname: "cobol", sname: "krik", age: 23, iq: 122 },
+    { fname: "upper", sname: "obal", age: 34, iq: 110 },
+    { fname: "uner", sname: "pjer", age: 34, iq: 110 },
+  ];
 </script>
 
 <main>
-  <h1 style="color:{ncolor}">Hello {fullName}!</h1>
-  <input type="text" bind:value={fname} />
-  <input type="text" bind:value={sname} />
-  <input type="text" bind:value={ncolor} />
+  {#each people as person}
+    <h1 style="color:{person.fname}">
+      Hello {person.sname}! He's {person.age}
+    </h1>
+  {/each}
 </main>
 
 <style>
