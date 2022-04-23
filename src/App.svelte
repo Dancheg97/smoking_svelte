@@ -5,9 +5,6 @@
     { fname: "upper", sname: "obal", age: 34, id: 3 },
     { fname: "uner", sname: "pjer", age: 34, id: 4 },
   ];
-  function removePerson(id) {
-    people = people.filter((person) => person.id != id);
-  }
 </script>
 
 <main>
@@ -17,7 +14,7 @@
     </h1>
     <button
       on:click={() => {
-        removePerson(person.id);
+        people = people.filter((pers) => pers.id != person.id);
       }}
     >
       delete
