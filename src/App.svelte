@@ -1,17 +1,19 @@
 <script>
   let people = [
-    { fname: "tasty", sname: "sweety", age: 21, iq: 128 },
-    { fname: "cobol", sname: "krik", age: 23, iq: 122 },
-    { fname: "upper", sname: "obal", age: 34, iq: 110 },
-    { fname: "uner", sname: "pjer", age: 34, iq: 110 },
+    // { fname: "tasty", sname: "sweety", age: 21, iq: 128 },
+    // { fname: "cobol", sname: "krik", age: 23, iq: 122 },
+    // { fname: "upper", sname: "obal", age: 34, iq: 110 },
+    // { fname: "uner", sname: "pjer", age: 34, iq: 110 },
   ];
 </script>
 
 <main>
   {#each people as person}
-    <h1 style="color:{person.fname}">
+    <h1>
       Hello {person.sname}! He's {person.age}
     </h1>
+  {:else}
+    <h1>No stuff buddy! :D</h1>
   {/each}
 </main>
 
