@@ -1,10 +1,13 @@
 <script>
   let people = [
-    // { fname: "tasty", sname: "sweety", age: 21, iq: 128 },
-    // { fname: "cobol", sname: "krik", age: 23, iq: 122 },
-    // { fname: "upper", sname: "obal", age: 34, iq: 110 },
-    // { fname: "uner", sname: "pjer", age: 34, iq: 110 },
+    { fname: "tasty", sname: "sweety", age: 21, id: 1 },
+    { fname: "cobol", sname: "krik", age: 23, id: 2 },
+    { fname: "upper", sname: "obal", age: 34, id: 3 },
+    { fname: "uner", sname: "pjer", age: 34, id: 4 },
   ];
+  function removePerson(id) {
+    people = people.filter((person) => person.id != id);
+  }
 </script>
 
 <main>
@@ -12,6 +15,13 @@
     <h1>
       Hello {person.sname}! He's {person.age}
     </h1>
+    <button
+      on:click={() => {
+        removePerson(person.id);
+      }}
+    >
+      delete
+    </button>
   {:else}
     <h1>No stuff buddy! :D</h1>
   {/each}
