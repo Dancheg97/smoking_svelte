@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   import Modal from "./Modal.svelte";
   let people = [
     { fname: "tasty", sname: "sweety", age: 21, id: 1 },

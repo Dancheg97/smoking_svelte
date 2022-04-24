@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
   let show = true;
   function hide() {
     show = false;
