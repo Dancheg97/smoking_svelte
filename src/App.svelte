@@ -1,4 +1,5 @@
 <script>
+  import Modal from "./modal.svelte";
   let people = [
     { fname: "tasty", sname: "sweety", age: 21, id: 1 },
     { fname: "cobol", sname: "krik", age: 23, id: 2 },
@@ -7,6 +8,7 @@
   ];
 </script>
 
+<Modal />
 <main>
   {#each people as person}
     {#if person.id % 2 === 0}

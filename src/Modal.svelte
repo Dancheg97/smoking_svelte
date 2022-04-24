@@ -1,10 +1,13 @@
 <script>
+  let show = true;
 </script>
 
-<div class="backdrop">
-  <div class="modal">
-    <p>Some stuff</p>
+{#if show}
+  <div class="backdrop">
+    <div class="modal">
+      <p>New component</p>
+    </div>
   </div>
-</div>
+{/if}
 
 <style></style>
