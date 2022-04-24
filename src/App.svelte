@@ -1,15 +1,17 @@
 <script lang="ts">
+  import Modal from "./Modal.svelte";
   let people = [
     { fname: "tasty", sname: "sweety", age: 21, id: 1 },
     { fname: "cobol", sname: "krik", age: 23, id: 2 },
     { fname: "upper", sname: "obal", age: 34, id: 3 },
     { fname: "uner", sname: "pjer", age: 34, id: 4 },
   ];
-  function removePerson(id: number) {
+  function removePerson(id) {
     people = people.filter((person) => person.id != id);
   }
 </script>
 
+<Modal />
 <main>
   {#each people as person}
     <h1>
