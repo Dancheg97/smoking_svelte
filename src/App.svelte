@@ -1,11 +1,11 @@
-<script>
+<script lang="ts">
   let people = [
     { fname: "tasty", sname: "sweety", age: 21, id: 1 },
     { fname: "cobol", sname: "krik", age: 23, id: 2 },
     { fname: "upper", sname: "obal", age: 34, id: 3 },
     { fname: "uner", sname: "pjer", age: 34, id: 4 },
   ];
-  function removePerson(id) {
+  function removePerson(id: number) {
     people = people.filter((person) => person.id != id);
   }
 </script>
