@@ -9,17 +9,31 @@
 
 <main>
   {#each people as person}
-    <h1>
-      Hello {person.sname}! He's {person.age}
-    </h1>
-    <button
-      on:click={(event) => {
-        console.log(event);
-        people = people.filter((pers) => pers.id != person.id);
-      }}
-    >
-      delete
-    </button>
+    {#if person.id % 2 === 0}
+      <h1>
+        Hello {person.sname}! He's {person.age}
+      </h1>
+      <button
+        on:click={(event) => {
+          console.log(event);
+          people = people.filter((pers) => pers.id != person.id);
+        }}
+      >
+        delete
+      </button>
+    {:else}
+      <h2>
+        Hello {person.sname}! He's {person.age}
+      </h2>
+      <button
+        on:click={(event) => {
+          console.log(event);
+          people = people.filter((pers) => pers.id != person.id);
+        }}
+      >
+        delete
+      </button>
+    {/if}
   {:else}
     <h1>No stuff buddy! :D</h1>
   {/each}
