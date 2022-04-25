@@ -11,7 +11,7 @@
   }
 </script>
 
-<Modal />
+<Modal message="pass some stuff inside there" />
 <main>
   {#each people as person}
     <h1>

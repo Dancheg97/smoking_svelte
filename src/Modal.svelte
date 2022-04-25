@@ -1,15 +1,18 @@
 <script>
+  export let message;
   let show = true;
+  let isPromo = false;
   function hide() {
     show = false;
   }
 </script>
 
 {#if show}
-  <div class="backdrop">
+  <div class="backdrop" class:promo={isPromo}>
     <div class="modal">
       <h3>Modal window!</h3>
       <p>Some dummy shit is listed over here... Just read :D</p>
+      <p>{message}</p>
       <button on:click={hide}> Hide </button>
     </div>
   </div>
@@ -29,5 +32,9 @@
     margin: 10% auto;
     text-align: center;
     background: white;
+  }
+  .promo .modal {
+    background: crimson;
+    color: white;
   }
 </style>
