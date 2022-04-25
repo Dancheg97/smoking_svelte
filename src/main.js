@@ -1,8 +1,8 @@
-import app from "./app.svelte";
+import App from "./App.svelte";
 
-const app = new app({
+const App = new App({
   target: document.body,
   props: {},
 });
 
-export default app;
+export default App;
